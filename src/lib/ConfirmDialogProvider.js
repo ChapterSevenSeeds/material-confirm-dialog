@@ -33,12 +33,16 @@ export default function ConfirmDialogProvider(props) {
         setDialogOpen(false);
         
         resolve.current(DialogResult.Confirm);
+
+        options.current = defaults;
     }
 
     function onCancel() {
         setDialogOpen(false);
         
         resolve.current(DialogResult.Cancel);
+        
+        options.current = defaults;
     }
 
     return (
