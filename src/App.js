@@ -5,10 +5,13 @@ import { DialogResult } from "./lib/Enums";
 
 function App() {
     const [clicked, setClicked] = useState('');
+    const [data, setData] = useState(null);
     const { showDialog } = useConfirmDialog();
 
     async function clickMe() {
-        setClicked(await showDialog() === DialogResult.Confirm ? 'Confirm' : 'Cancel')
+        const result = await showDialog({ data: 3 });
+        setClicked(result.dialogResult === DialogResult.Confirm ? 'Confirm' : 'Cancel')
+        setData(result.data);
     }
     return (
         <div>
@@ -18,6 +21,9 @@ function App() {
                 </Grid>
                 <Grid item>
                     {clicked}
+                </Grid>
+                <Grid item>
+                    {data}
                 </Grid>
             </Grid>
         </div>
