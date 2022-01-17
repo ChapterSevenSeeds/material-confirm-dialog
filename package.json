@@ -1,26 +1,43 @@
 {
-  "name": "material-confirm-dialog",
-  "version": "0.1.0",
-  "private": false,
-  "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0"
-  },
-  "scripts": {
-    "dev": "react-scripts start"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "material-confirm-dialog",
+    "version": "0.1.0",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "description": "React context wrapper for a Material-UI confirm dialog.",
+    "private": false,
+    "keywords": [
+        "material",
+        "confirm",
+        "dialog"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "peer-dependencies": {
+        "@material-ui/core": "^4.12.3",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.16.8",
+        "@babel/core": "^7.16.7",
+        "@babel/preset-react": "^7.16.7",
+        "@material-ui/core": "^4.12.3",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "5.0.0"
+    },
+    "scripts": {
+        "dev": "react-scripts start",
+        "build": "babel src/lib/* --out-dir dist --copy-files"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }

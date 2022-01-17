@@ -21,7 +21,6 @@ declare module 'material-confirm-dialog' {
         defaults: ConfirmDialogProviderDefaultProps
     }
 
-
     const ConfirmDialogProvider: React.FC<ConfirmDialogProviderProps>;
 
     export default ConfirmDialogProvider;
@@ -37,7 +36,7 @@ declare module 'material-confirm-dialog' {
     }
 
     interface ShowDialogOptions {
-        title: String,
+        title: React.ReactNode,
         body: React.ReactNode,
         confirmText: React.ReactNode,
         cancelText: React.ReactNode,
