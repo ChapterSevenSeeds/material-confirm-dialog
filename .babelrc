@@ -1,6 +1,18 @@
 {
     "presets": [
-        "@babel/preset-react",
-        "@babel/preset-env"
+        [
+            "@babel/preset-react",
+            {
+                "typescript": true
+            }
+        ],
+        "@babel/preset-env",
+        [
+            "@babel/preset-typescript",
+            {
+                "isTSX": true,
+                "allExtensions": true
+            }
+        ]
     ]
 }
